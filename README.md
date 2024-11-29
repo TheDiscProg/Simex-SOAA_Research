@@ -13,4 +13,4 @@ This research paper highlights two key designs that can assist in taming the wer
 
 In addition, the research paper also details a network protocol, Simex Exchange Protocol or SEP for short, that can be used to enhance communication.
 
-** Please note that this is still in early draft and subject to change *signficantly*. **
+**Please note that this is still in early draft and *will change signficantly*.**
