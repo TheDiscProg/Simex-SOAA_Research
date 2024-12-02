@@ -22,4 +22,4 @@ These libraries are also available in Maven Central under [*io.github.thediscpro
 
 In addition, the research paper also details a network protocol, Simex Exchange Protocol or SEP for short, that can be used to enhance communication and security (currently in development).
 
-**Please note that this is still in early draft and *will change signficantly*.**
+**Please note that this is still in early draft.**
