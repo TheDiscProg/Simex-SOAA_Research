@@ -12,13 +12,18 @@ Software engineers encounter two fundamental challenges:
 ## Complexity
 In his 1986 paper titled “No Silver Bullet: Essence and Accidents of Software Engineering,” Frederick Brooks employed the metaphor of a werewolf to illustrate the detrimental effects of complexity on software maintenance and enhancement. This complexity manifests in missed deadlines, overspending, and subpar product quality. The primary source of complexity lies in the abstraction of business models, which can be further exacerbated by additional abstractions in functional programming.
 
-This issue is further compounded by the complexity of network communications. For instance, numerous mobile applications access backend services via REST APIs through a gateway that corresponds to the URL of a backend service. Any modifications to the API requires updates to the client, backend services, and the gateway. Coordinating these changes can, at best, result in the dreaded 404 error or, at worst, expose the backend services.
+This issue is further compounded by the complexity in network communications. For instance, numerous mobile applications access backend services via REST APIs through a gateway that matches the URL to a backend service. Any modifications to the API requires updates to the client, backend services, and the gateway. Coordinating these changes can result in network communication errors, such as the dreaded 404 error or, at worst, expose the backend services.
 
 ## Software Security
-Data breaches have underscored the inherent vulnerability of Internet-facing application servers that connect to data sources, such as databases, that store confidential data.
+Data breaches have highlighted the critical importance of securing Internet-facing application servers that connect to data sources, particularly those storing confidential information. These application servers, especially in environments where continuous API changes occur, can become susceptible to network security vulnerabilities due to human error.
 
 ## How Does this paper help?
-This paper looks at ways in which these two issues can be managed by using **Simple Message Exchange (Simex) API** and **Simex Oriented Asynchronous Architecture (SOAA)**. Although not claiming to be a "silver bullet," it can be a "silver-coated bullet."
+This paper looks at ways in which these two issues can be managed by using **Simple Message Exchange (Simex) API** and **Simex Oriented Asynchronous Architecture (SOAA)**. Although not claiming to be a "silver bullet," it can be a "silver-coated bullet." In an application developed using Simex and SOAA, we have found that:
+1. Internet-facing application servers can be *locked down* once the gateways are configured;
+2. There is only one message, the Simex message, that is transmitted between clients and services reducing network complexity;
+3. The client can make multiple requests and *pick up* responses when it is ready;
+4. The application server design can use the concept of an orchestrator that receives and handles Simex message;
+5. Within the backend services, use Kafka and RabbitMQ to make the system completely event-driven.
 
 As part of this project, the following is a list of open-source Scala libraries that have been developed to support Simex and SOAA:
 
