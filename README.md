@@ -17,7 +17,7 @@ This issue is further compounded by the complexity in network communications. Fo
 ## Software Security
 Data breaches have highlighted the critical importance of securing Internet-facing application servers that connect to data sources, particularly those storing confidential information. These application servers, especially in environments where continuous API changes occur, can become susceptible to network security vulnerabilities due to human error.
 
-## How Does this paper help?
+## How does this paper help?
 This paper looks at ways in which these two issues can be managed by using **Simple Message Exchange (Simex) API** and **Simex Oriented Asynchronous Architecture (SOAA)**. Although not claiming to be a "silver bullet," it can be a "silver-coated bullet." In an application developed using Simex and SOAA, we have found that:
 1. Internet-facing application servers can be *locked down* once the gateways are configured;
 2. There is only one message, the Simex message, that is transmitted between clients and services reducing network complexity;
