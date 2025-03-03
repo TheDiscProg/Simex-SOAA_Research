@@ -23,7 +23,8 @@ This paper looks at ways in which these two issues can be managed by using **Sim
 2. There is only one message, the Simex message, that is transmitted between clients and services reducing network complexity;
 3. The client can make multiple requests and *pick up* responses when it is ready;
 4. The application server design can use the concept of an orchestrator that receives and handles Simex message;
-5. Within the backend services, use Kafka and RabbitMQ to make the system completely event-driven.
+5. Within the backend services, use Kafka and RabbitMQ to make the system completely event-driven;
+6. Fault finding and diagnosing issues are considerably simpler.
 
 As part of this project, the following is a list of open-source Scala libraries that have been developed to support Simex and SOAA:
 
